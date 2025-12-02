@@ -199,7 +199,9 @@ services:
       - webapi_network
     restart: always
   car-api1:
-    build: ../src/
+    build:
+      context: ../src/
+      dockerfile: ../docker/Dockerfile
     image: car-api:latest
     container_name: web-api1
     environment:
@@ -215,7 +217,9 @@ services:
       - elasticsearch
     restart: unless-stopped
   car-api2:
-    build: ../src/
+    build:
+      context: ../src/
+      dockerfile: ../docker/Dockerfile
     image: car-api:latest
     container_name: web-api2
     environment:
