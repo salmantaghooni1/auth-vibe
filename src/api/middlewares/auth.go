@@ -8,11 +8,11 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt"
 
-	"github.com/salmantaghooni/golang-car-web-api/src/api/helper"
-	"github.com/salmantaghooni/golang-car-web-api/src/config"
-	"github.com/salmantaghooni/golang-car-web-api/src/constants"
-	"github.com/salmantaghooni/golang-car-web-api/src/pkg/service_errors"
-	"github.com/salmantaghooni/golang-car-web-api/src/services"
+	"github.com/salmantaghooni/golang-car-web-api/api/helper"
+	"github.com/salmantaghooni/golang-car-web-api/config"
+	"github.com/salmantaghooni/golang-car-web-api/constants"
+	"github.com/salmantaghooni/golang-car-web-api/pkg/service_errors"
+	"github.com/salmantaghooni/golang-car-web-api/services"
 )
 
 func Authentication(cfg *config.Config) gin.HandlerFunc {

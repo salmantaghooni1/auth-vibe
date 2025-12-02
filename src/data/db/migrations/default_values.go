@@ -1,6 +1,6 @@
 package migrations
 
-import "github.com/salmantaghooni/golang-car-web-api/src/data/models"
+import "github.com/salmantaghooni/golang-car-web-api/data/models"
 
 func getBodyProperties(cat int) *[]models.Property {
 	var props []models.Property = []models.Property{

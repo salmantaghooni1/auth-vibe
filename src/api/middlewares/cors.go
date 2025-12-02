@@ -3,7 +3,7 @@ package middlewares
 import (
 	"github.com/gin-gonic/gin"
 
-	"github.com/salmantaghooni/golang-car-web-api/src/config"
+	"github.com/salmantaghooni/golang-car-web-api/config"
 )
 
 func Cors(cfg *config.Config) gin.HandlerFunc {

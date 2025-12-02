@@ -1,53 +1,55 @@
+# config/config-docker.yml
 server:
-  Port: 5005
-  RunMode: debug
-logger:
-  filePath: ../logs/logs.log
-  Encoding: json
-  level: debug
-  logger: zap
+  port: "5000"
+  runMode: "release"
 
-cors:
-  allowOrigin: "*"
 postgres:
-  host: postgres_container
-  port: 5432
-  user: postgres
-  password: admin
-  dbName: car_sale_db
-  sslMode: disable
-  maxIdleConns: 15
+  host: "postgres"
+  port: "5432"
+  user: "postgres"
+  password: "admin"
+  dbName: "vibecloud"
+  sslMode: "disable"
+  maxIdleConns: 10
   maxOpenConns: 100
-  connMaxLifetime: 5
+  connMaxLifetime: 3600
 
 redis:
- host: redis_container
- port: 6379
- password: 
- db: 0
- readTimeout: 10
- writeTimeout: 10
- dialTimeout: 10
- minIdleConnections: 100
- poolSize: 10
- poolTimeout: 15
- idleCheckFrequency: 500
- passwrd:
-  includeChars: true
-  includeDigits: true
-  minLength: 6
-  maxLength: 64
-  includeUppercase: true
-  includeLowercase: true
+  host: "redis"
+  port: "6379"
+  password: ""
+  db: "0"
+  dialTimeout: 5
+  readTimeout: 3
+  writeTimeout: 3
+  idleCheckFrequency: 60
+  poolSize: 10
+  poolTimeout: 30
 
+cors:
+  allowOrigins: "*"
+
+logger:
+  filePath: "/app/logs/app.log"
+  encoding: "json"
+  level: "info"
+  logger: "zap"
 
 otp:
   expireTime: 120
   digits: 6
-  limitter: 100
+  limmiter: 120
 
-  jwt:
-    secret: "mySecretKey"
-    refreshSecret: "mySecretKey"
-    accessTokenExpireDuration : 1440
-    refreshTokenExpireDuration : 60
+jwt:
+  secret: "your-secret-key-change-in-production"
+  refreshSecret: "your-refresh-secret-change-in-production"
+  accessTokenExpireDuration: 1440
+  refreshTokenExpireDuration: 10080
+
+password:
+  includeChars: true
+  includeDigits: true
+  minLength: 8
+  maxLength: 64
+  includeUppercase: true
+  includeLowercase: true

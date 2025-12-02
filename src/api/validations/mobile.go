@@ -3,7 +3,7 @@ package validations
 import (
 	"github.com/go-playground/validator"
 
-	"github.com/salmantaghooni/golang-car-web-api/src/common"
+	"github.com/salmantaghooni/golang-car-web-api/common"
 )
 
 var IranianMobileNumberValidate validator.Func = func(fld validator.FieldLevel) bool {

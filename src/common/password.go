@@ -9,7 +9,7 @@ import (
 	"time"
 	"unicode"
 
-	"github.com/salmantaghooni/golang-car-web-api/src/config"
+	"github.com/salmantaghooni/golang-car-web-api/config"
 )
 
 var (

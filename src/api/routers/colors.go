@@ -2,8 +2,8 @@ package routers
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/salmantaghooni/golang-car-web-api/src/api/handlers"
-	"github.com/salmantaghooni/golang-car-web-api/src/config"
+	"github.com/salmantaghooni/golang-car-web-api/api/handlers"
+	"github.com/salmantaghooni/golang-car-web-api/config"
 )
 
 func Color(r *gin.RouterGroup, cfg *config.Config) {

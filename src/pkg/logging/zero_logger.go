@@ -6,7 +6,7 @@ import (
 
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/pkgerrors"
-	"github.com/salmantaghooni/golang-car-web-api/src/config"
+	"github.com/salmantaghooni/golang-car-web-api/config"
 )
 
 var once sync.Once

@@ -1,6 +1,6 @@
 package helper
 
-import "github.com/salmantaghooni/golang-car-web-api/src/api/validations"
+import "github.com/salmantaghooni/golang-car-web-api/api/validations"
 
 type BaseHttpResponse struct {
 	Result           any                            `json:"result"`

@@ -3,8 +3,8 @@ package routers
 import (
 	"github.com/gin-gonic/gin"
 
-	"github.com/salmantaghooni/golang-car-web-api/src/api/handlers"
-	"github.com/salmantaghooni/golang-car-web-api/src/config"
+	"github.com/salmantaghooni/golang-car-web-api/api/handlers"
+	"github.com/salmantaghooni/golang-car-web-api/config"
 )
 
 func Year(r *gin.RouterGroup, cfg *config.Config) {

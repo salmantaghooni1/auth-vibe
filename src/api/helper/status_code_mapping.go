@@ -3,7 +3,7 @@ package helper
 import (
 	"net/http"
 
-	"github.com/salmantaghooni/golang-car-web-api/src/pkg/service_errors"
+	"github.com/salmantaghooni/golang-car-web-api/pkg/service_errors"
 )
 
 var StatusCodeMapping = map[string]int{

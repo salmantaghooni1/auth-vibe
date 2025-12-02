@@ -3,11 +3,11 @@ package services
 import (
 	"context"
 
-	"github.com/salmantaghooni/golang-car-web-api/src/api/dto"
-	"github.com/salmantaghooni/golang-car-web-api/src/config"
-	"github.com/salmantaghooni/golang-car-web-api/src/data/db"
-	"github.com/salmantaghooni/golang-car-web-api/src/data/models"
-	"github.com/salmantaghooni/golang-car-web-api/src/pkg/logging"
+	"github.com/salmantaghooni/golang-car-web-api/api/dto"
+	"github.com/salmantaghooni/golang-car-web-api/config"
+	"github.com/salmantaghooni/golang-car-web-api/data/db"
+	"github.com/salmantaghooni/golang-car-web-api/data/models"
+	"github.com/salmantaghooni/golang-car-web-api/pkg/logging"
 )
 
 type CityService struct {

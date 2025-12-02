@@ -3,10 +3,10 @@ package handlers
 import (
 	"github.com/gin-gonic/gin"
 
-	_ "github.com/salmantaghooni/golang-car-web-api/src/api/dto"
-	_ "github.com/salmantaghooni/golang-car-web-api/src/api/helper"
-	"github.com/salmantaghooni/golang-car-web-api/src/config"
-	"github.com/salmantaghooni/golang-car-web-api/src/services"
+	_ "github.com/salmantaghooni/golang-car-web-api/api/dto"
+	_ "github.com/salmantaghooni/golang-car-web-api/api/helper"
+	"github.com/salmantaghooni/golang-car-web-api/config"
+	"github.com/salmantaghooni/golang-car-web-api/services"
 )
 
 type PropertyHandler struct {

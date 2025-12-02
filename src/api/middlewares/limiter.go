@@ -6,7 +6,7 @@ import (
 	"github.com/didip/tollbooth"
 	"github.com/gin-gonic/gin"
 
-	"github.com/salmantaghooni/golang-car-web-api/src/api/helper"
+	"github.com/salmantaghooni/golang-car-web-api/api/helper"
 )
 
 func LimitByRequest() gin.HandlerFunc {

@@ -11,15 +11,15 @@ import (
 
 	"gorm.io/gorm"
 
-	"github.com/salmantaghooni/golang-car-web-api/src/api/dto"
-	"github.com/salmantaghooni/golang-car-web-api/src/common"
-	"github.com/salmantaghooni/golang-car-web-api/src/config"
-	"github.com/salmantaghooni/golang-car-web-api/src/constants"
-	"github.com/salmantaghooni/golang-car-web-api/src/data/db"
-	"github.com/salmantaghooni/golang-car-web-api/src/data/models"
-	"github.com/salmantaghooni/golang-car-web-api/src/pkg/logging"
-	"github.com/salmantaghooni/golang-car-web-api/src/pkg/metrics"
-	"github.com/salmantaghooni/golang-car-web-api/src/pkg/service_errors"
+	"github.com/salmantaghooni/golang-car-web-api/api/dto"
+	"github.com/salmantaghooni/golang-car-web-api/common"
+	"github.com/salmantaghooni/golang-car-web-api/config"
+	"github.com/salmantaghooni/golang-car-web-api/constants"
+	"github.com/salmantaghooni/golang-car-web-api/data/db"
+	"github.com/salmantaghooni/golang-car-web-api/data/models"
+	"github.com/salmantaghooni/golang-car-web-api/pkg/logging"
+	"github.com/salmantaghooni/golang-car-web-api/pkg/metrics"
+	"github.com/salmantaghooni/golang-car-web-api/pkg/service_errors"
 )
 
 type preload struct {

@@ -3,7 +3,7 @@ package logging
 import (
 	"fmt"
 
-	"github.com/salmantaghooni/golang-car-web-api/src/config"
+	"github.com/salmantaghooni/golang-car-web-api/config"
 )
 
 type Logger interface {

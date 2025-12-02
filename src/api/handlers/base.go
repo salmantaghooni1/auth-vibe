@@ -7,7 +7,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/salmantaghooni/golang-car-web-api/src/api/helper"
+	"github.com/salmantaghooni/golang-car-web-api/api/helper"
 )
 
 func Create[Ti any, To any](c *gin.Context, caller func(ctx context.Context, req *Ti) (*To, error)) {

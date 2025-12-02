@@ -6,7 +6,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/salmantaghooni/golang-car-web-api/src/pkg/metrics"
+	"github.com/salmantaghooni/golang-car-web-api/pkg/metrics"
 )
 
 func Prometheus() gin.HandlerFunc {

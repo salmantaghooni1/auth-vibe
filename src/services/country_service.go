@@ -3,11 +3,11 @@ package services
 import (
 	"context"
 
-	"github.com/salmantaghooni/golang-car-web-api/src/api/dto"
-	"github.com/salmantaghooni/golang-car-web-api/src/config"
-	"github.com/salmantaghooni/golang-car-web-api/src/data/db"
-	"github.com/salmantaghooni/golang-car-web-api/src/data/models"
-	"github.com/salmantaghooni/golang-car-web-api/src/pkg/logging"
+	"github.com/salmantaghooni/golang-car-web-api/api/dto"
+	"github.com/salmantaghooni/golang-car-web-api/config"
+	"github.com/salmantaghooni/golang-car-web-api/data/db"
+	"github.com/salmantaghooni/golang-car-web-api/data/models"
+	"github.com/salmantaghooni/golang-car-web-api/pkg/logging"
 )
 
 type CountryService struct {
@@ -27,7 +27,7 @@ func NewCountryService(cfg *config.Config) *CountryService {
 // Create
 func (s *CountryService) Create(ctx context.Context, req *dto.CreateUpdateCountryRequest) (*dto.CountryResponse, error) {
 	return s.base.Create(ctx, req)
-} 
+}
 
 // Update
 func (s *CountryService) Update(ctx context.Context, id int, req *dto.CreateUpdateCountryRequest) (*dto.CountryResponse, error) {

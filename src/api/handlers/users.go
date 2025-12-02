@@ -5,10 +5,10 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/salmantaghooni/golang-car-web-api/src/api/dto"
-	"github.com/salmantaghooni/golang-car-web-api/src/api/helper"
-	"github.com/salmantaghooni/golang-car-web-api/src/config"
-	"github.com/salmantaghooni/golang-car-web-api/src/services"
+	"github.com/salmantaghooni/golang-car-web-api/api/dto"
+	"github.com/salmantaghooni/golang-car-web-api/api/helper"
+	"github.com/salmantaghooni/golang-car-web-api/config"
+	"github.com/salmantaghooni/golang-car-web-api/services"
 )
 
 type UsersHandler struct {

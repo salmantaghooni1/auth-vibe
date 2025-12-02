@@ -7,9 +7,9 @@ import (
 	"github.com/gin-gonic/gin"
 	"golang.org/x/time/rate"
 
-	"github.com/salmantaghooni/golang-car-web-api/src/api/helper"
-	"github.com/salmantaghooni/golang-car-web-api/src/config"
-	"github.com/salmantaghooni/golang-car-web-api/src/pkg/limmiter"
+	"github.com/salmantaghooni/golang-car-web-api/api/helper"
+	"github.com/salmantaghooni/golang-car-web-api/config"
+	"github.com/salmantaghooni/golang-car-web-api/pkg/limmiter"
 )
 
 func OtpLimiter(cfg *config.Config) gin.HandlerFunc {

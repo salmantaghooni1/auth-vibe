@@ -7,7 +7,7 @@ import (
 
 	"github.com/go-redis/redis"
 
-	"github.com/salmantaghooni/golang-car-web-api/src/config"
+	"github.com/salmantaghooni/golang-car-web-api/config"
 )
 
 var redisClient *redis.Client

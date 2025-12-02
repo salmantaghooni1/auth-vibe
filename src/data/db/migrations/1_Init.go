@@ -6,11 +6,11 @@ import (
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 
-	"github.com/salmantaghooni/golang-car-web-api/src/config"
-	"github.com/salmantaghooni/golang-car-web-api/src/constants"
-	"github.com/salmantaghooni/golang-car-web-api/src/data/db"
-	"github.com/salmantaghooni/golang-car-web-api/src/data/models"
-	"github.com/salmantaghooni/golang-car-web-api/src/pkg/logging"
+	"github.com/salmantaghooni/golang-car-web-api/config"
+	"github.com/salmantaghooni/golang-car-web-api/constants"
+	"github.com/salmantaghooni/golang-car-web-api/data/db"
+	"github.com/salmantaghooni/golang-car-web-api/data/models"
+	"github.com/salmantaghooni/golang-car-web-api/pkg/logging"
 )
 
 var logger = logging.NewLogger(config.GetConfig())
@@ -76,7 +76,6 @@ func addNewTable(database *gorm.DB, model interface{}, tables []interface{}) []i
 func createDefaultUserInformation(database *gorm.DB) {
 	adminRole := models.Role{Name: constants.AdminRoleName}
 	createRoleIfNotExist(database, &adminRole)
-
 
 	adminUser := models.User{FirstName: "salman", LastName: "taghooni", MobileNumber: "09133851769", Username: constants.DefaultUserName, Email: constants.DefaultEmail}
 	psswd := constants.DefaultPassword

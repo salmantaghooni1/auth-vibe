@@ -5,11 +5,11 @@ import (
 
 	"github.com/golang-jwt/jwt"
 
-	"github.com/salmantaghooni/golang-car-web-api/src/api/dto"
-	"github.com/salmantaghooni/golang-car-web-api/src/config"
-	"github.com/salmantaghooni/golang-car-web-api/src/constants"
-	"github.com/salmantaghooni/golang-car-web-api/src/pkg/logging"
-	"github.com/salmantaghooni/golang-car-web-api/src/pkg/service_errors"
+	"github.com/salmantaghooni/golang-car-web-api/api/dto"
+	"github.com/salmantaghooni/golang-car-web-api/config"
+	"github.com/salmantaghooni/golang-car-web-api/constants"
+	"github.com/salmantaghooni/golang-car-web-api/pkg/logging"
+	"github.com/salmantaghooni/golang-car-web-api/pkg/service_errors"
 )
 
 type TokenService struct {
