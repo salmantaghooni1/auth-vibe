@@ -15,9 +15,9 @@ postgres:
   connMaxLifetime: 3600
 
 redis:
-  host: "redis"
+  host: "redis_container"
   port: "6379"
-  password: ""
+  password: "password"
   db: "0"
   dialTimeout: 5
   readTimeout: 3

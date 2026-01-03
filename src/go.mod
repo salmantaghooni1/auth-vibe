@@ -1,6 +1,8 @@
 module github.com/salmantaghooni/golang-car-web-api
 
-go 1.24.8
+go 1.24.0
+
+toolchain go1.24.8
 
 require (
 	github.com/didip/tollbooth v4.0.2+incompatible
@@ -18,12 +20,14 @@ require (
 	github.com/swaggo/swag v1.16.6
 	go.uber.org/zap v1.27.1
 	golang.org/x/crypto v0.45.0
+	golang.org/x/oauth2 v0.34.0
 	golang.org/x/time v0.14.0
 	gorm.io/driver/postgres v1.6.0
 	gorm.io/gorm v1.31.1
 )
 
 require (
+	cloud.google.com/go/compute/metadata v0.3.0 // indirect
 	github.com/BurntSushi/toml v1.5.0 // indirect
 	github.com/KyleBanks/depth v1.2.1 // indirect
 	github.com/PuerkitoBio/purell v1.1.1 // indirect

@@ -18,7 +18,15 @@ type Config struct {
 	OTP      OtpConfig
 	JWT      JWTConfig
 	Password PasswordConfig
+	Google   GoogleConfig
 }
+
+type GoogleConfig struct {
+	ClientID     string
+	ClientSecret string
+	RedirectURL  string
+}
+
 type Cors struct {
 	AllowOrigins string `default:"*"`
 }
@@ -125,7 +133,7 @@ func LoadConfig(filename string, fileType string) (*viper.Viper, error) {
 
 func getConfigPath(env string) string {
 	if env == "docker" {
-		return "../config/config-docker"
+		return "config/config-docker"
 	} else if env == "production" {
 		return "config/config-production"
 	} else {

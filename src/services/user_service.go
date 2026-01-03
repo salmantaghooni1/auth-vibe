@@ -1,10 +1,9 @@
 package services
 
 import (
+	"encoding/json"
 	"fmt"
-
-	"golang.org/x/crypto/bcrypt"
-	"gorm.io/gorm"
+	"net/http"
 
 	"github.com/salmantaghooni/golang-car-web-api/api/dto"
 	"github.com/salmantaghooni/golang-car-web-api/common"
@@ -13,15 +12,19 @@ import (
 	"github.com/salmantaghooni/golang-car-web-api/data/db"
 	"github.com/salmantaghooni/golang-car-web-api/data/models"
 	"github.com/salmantaghooni/golang-car-web-api/pkg/logging"
-	"github.com/salmantaghooni/golang-car-web-api/pkg/service_errors"
+	"golang.org/x/crypto/bcrypt"
+	"golang.org/x/oauth2"
+	"golang.org/x/oauth2/google"
+	"gorm.io/gorm"
 )
 
 type UserService struct {
-	logger       logging.Logger
-	cfg          *config.Config
-	otpService   *OtpService
-	database     *gorm.DB
-	tokenService *TokenService
+	logger            logging.Logger
+	cfg               *config.Config
+	otpService        *OtpService
+	database          *gorm.DB
+	tokenService      *TokenService
+	googleOauthConfig *oauth2.Config
 }
 
 func NewUserService(cfg *config.Config) *UserService {
@@ -34,20 +37,20 @@ func NewUserService(cfg *config.Config) *UserService {
 
 func (s *UserService) RegisterByUsername(req *dto.RegisterUserByUsernameRequest) error {
 	u := models.User{Username: req.Username, FirstName: req.FirstName, LastName: req.LastName, Email: req.Email}
+	s.googleOauthConfig = &oauth2.Config{
+		ClientID:     s.cfg.Google.ClientID,
+		ClientSecret: s.cfg.Google.ClientSecret,
+		RedirectURL:  s.cfg.Google.RedirectURL,
+		Scopes:       []string{"email", "profile"},
+		Endpoint:     google.Endpoint,
+	}
+	userInfoURL := fmt.Sprintf("https://www.googleapis.com/oauth2/v2/userinfo?access_token=%s", req.Token)
 
-	exists, err := s.existsByEmail(req.Email)
-	if err != nil {
-		return err
-	}
-	if exists {
-		return &service_errors.ServiceError{EndUserMessage: service_errors.EmailExists}
-	}
-	exists, err = s.existsByUsername(req.Username)
-	if err != nil {
-		return err
-	}
-	if exists {
-		return &service_errors.ServiceError{EndUserMessage: service_errors.UsernameExists}
+	resp, err := http.Get(userInfoURL)
+	defer resp.Body.Close()
+
+	var gUser dto.RegisterUserByUsernameRequest
+	if err := json.NewDecoder(resp.Body).Decode(&gUser); err != nil {
 	}
 
 	bp := []byte(req.Password)
